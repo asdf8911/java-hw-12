@@ -1,5 +1,6 @@
 public class Repository {
     protected Product[] items = new Product[0];
+
     public void save(Product item) { // МЕТОД, позволяющий сохранять Product'ы
         Product[] tmp = new Product[items.length + 1];
         for (int i = 0; i < items.length; i++) {
@@ -8,6 +9,7 @@ public class Repository {
         tmp[tmp.length - 1] = item;
         items = tmp;
     }
+
     public Product[] findAll() { // МЕТОД, позволяющий получать все сохранённые Product'ы
         return items;
     }
